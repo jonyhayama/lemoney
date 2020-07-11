@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admin, path: 'admin' do
     get '/', to: 'home#index'
+
+    resources :offers
   end
 end
