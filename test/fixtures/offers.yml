@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: walmart
+  url: https://wallmart.com
+  description: Lorem Ipsum
+  starts_at: 2020-07-11 17:00:00
+  ends_at: 2020-07-12 17:00:00
+  premium: false
+
+two:
+  name: macys
+  url: https://macys.com
+  description: Dolor sit amet
+  starts_at: 2020-07-12 13:00:00
+  ends_at: null
+  premium: true
