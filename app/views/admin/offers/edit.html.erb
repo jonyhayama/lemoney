@@ -1,2 +1,4 @@
-<h1>Edit Offer #<%= @offer.id %></h1>
+<% content_for :main_title do %>
+  <h1>Edit Offer #<%= @offer.id %></h1>
+<% end %>
 <%= render partial: 'form' %>
