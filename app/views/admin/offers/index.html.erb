@@ -28,7 +28,7 @@
           <%# TODO: implement offer actions %>
           <%= link_to 'Edit', edit_admin_offer_path(offer), class: 'btn btn-secondary' %>
           <%# <a href="#" class="btn btn-secondary">disable/enable</a> %>
-          <%# <a href="#" class="btn btn-secondary">destroy</a> %>
+          <%= link_to 'Destroy', admin_offer_path(offer), method: 'delete', data: { confirm: 'Are you sure?' }, class: 'btn btn-secondary' %>
         </td>
       </tr>
     <% end %>

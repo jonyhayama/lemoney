@@ -1,4 +1,5 @@
 class Admin::OffersController < AdminController
+  before_action :set_current_offer, only: [:edit, :update, :destroy]
   
   def index
     @offers = Offer.all
@@ -14,14 +15,20 @@ class Admin::OffersController < AdminController
     redirect_to admin_offers_path
   end
 
-  def edit
-    @offer = Offer.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @offer = Offer.find(params[:id])
     @offer.update(offer_params)
     redirect_to admin_offers_path
+  end
+
+  def destroy
+    @offer.destroy
+    redirect_to admin_offers_path
+  end
+
+  def set_current_offer
+    @offer = Offer.find(params[:id])
   end
 
   private 
