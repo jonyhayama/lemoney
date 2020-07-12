@@ -1,4 +1,7 @@
 <div class="offer-card <%= 'premium-offer' if offer.is_premium? %>">
   <div class="offer-name"><%= offer.name %></div>
+  <div class="offer-description">
+    <div class="offer-description-content"><%= offer.description %></div>
+  </div>
   <a href="<%= offer.url %>" target="_blank" class="btn btn-primary">Show Now</a>
 </div>

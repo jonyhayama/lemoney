@@ -1,0 +1,8 @@
+@mixin box-clamp($numLines, $lineHeight){
+  max-height: $numLines * $lineHeight;
+  line-height: $lineHeight;
+  -webkit-line-clamp: $numLines;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}

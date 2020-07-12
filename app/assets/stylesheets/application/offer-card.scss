@@ -1,0 +1,52 @@
+@import 'mixins';
+@import 'colors';
+
+.offer-card {
+  text-align: center;
+  background: #e9ecef;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+
+  &.premium-offer {
+    background: $primary;
+    color: $white;
+    
+    &:before {
+      content: 'Premium';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      background: $white;
+      color: $primary;
+      padding: 5px 70px 5px 23px;
+      transform: rotate(-25deg);
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: $white;
+      color: $primary;
+    }
+  }
+
+  .offer-name {
+    font-size: 18px;
+    font-weight: bold; 
+    @include box-clamp(1, 1.5em);
+  }
+
+  .offer-description {
+    margin: 15px 0;
+    height: 4.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .offer-description-content {
+      @include box-clamp(3, 1.5em);
+    }
+  }
+}

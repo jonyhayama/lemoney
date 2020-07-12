@@ -1,3 +1,23 @@
-body {
-  background: #efefef
+@import 'mixins';
+@import 'colors';
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .gallery-item {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 980px) {
+    .gallery-item {
+      width: 100%;
+    }
+  }
+
+  .offer-card {
+    margin: 15px;
+    height: calc( 100% - 30px );
+  }
 }
