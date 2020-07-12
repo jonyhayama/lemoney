@@ -10,28 +10,28 @@
   </div>
 <% end %>
 <%= form_with model: [:admin, @offer], local: true do |f| %>
-  <div>
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name, required: true %>
+    <%= f.text_field :name, required: true, class: 'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :url %>
-    <%= f.url_field :url, required: true %>
+    <%= f.url_field :url, required: true, class: 'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description, required: true %>
+    <%= f.text_area :description, required: true, class: 'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :starts_at %>
-    <%= f.datetime_field :starts_at, required: true %>
+    <%= f.datetime_field :starts_at, required: true, class: 'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :ends_at %>
-    <%= f.datetime_field :ends_at %>
+    <%= f.datetime_field :ends_at, class: 'form-control' %>
   </div>
-  <div>
-    <%= f.check_box :premium %>
+  <div class="form-group form-check">
+    <%= f.check_box :premium, class: 'form-check-input' %>
     <%= f.label :premium %>
   </div>
   <div>
