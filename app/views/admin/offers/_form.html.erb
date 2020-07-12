@@ -1,0 +1,26 @@
+<%= form_with model: [:admin, @offer], local: true do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div>
+    <%= f.label :url %>
+    <%= f.url_field :url, required: true %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, required: true %>
+  </div>
+  <div>
+    <%= f.label :starts_at %>
+    <%= f.datetime_field :starts_at, required: true %>
+  </div>
+  <div>
+    <%= f.label :ends_at %>
+    <%= f.datetime_field :ends_at %>
+  </div>
+  <div>
+    <%= link_to 'Cancel', :back, class: 'btn btn-secondary' %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+  </div>
+<% end %>
