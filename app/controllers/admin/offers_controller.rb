@@ -1,4 +1,6 @@
 class Admin::OffersController < AdminController
   
-  def index; end
+  def index
+    @offers = Offer.all
+  end
 end
