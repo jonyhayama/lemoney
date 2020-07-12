@@ -40,6 +40,6 @@ class Admin::OffersController < AdminController
   private 
 
   def offer_params
-    params.require(:offer).permit(:name, :url, :description, :starts_at, :ends_at)
+    params.require(:offer).permit(:name, :url, :description, :starts_at, :ends_at, :premium)
   end
 end

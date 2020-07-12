@@ -31,6 +31,10 @@
     <%= f.datetime_field :ends_at %>
   </div>
   <div>
+    <%= f.check_box :premium %>
+    <%= f.label :premium %>
+  </div>
+  <div>
     <%= link_to 'Cancel', :back, class: 'btn btn-secondary' %>
     <%= f.submit 'Save', class: 'btn btn-primary' %>
   </div>
