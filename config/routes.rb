@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get '/', to: 'home#index'
 
     resources :offers
+    put 'offers/:id/toggle_status', to: 'offers#toggle_status', as: :offer_toggle_status
   end
 end

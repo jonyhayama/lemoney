@@ -1,5 +1,5 @@
 class Admin::OffersController < AdminController
-  before_action :set_current_offer, only: [:edit, :update, :destroy]
+  before_action :set_current_offer, only: [:edit, :update, :destroy, :toggle_status]
   
   def index
     @offers = Offer.all
@@ -30,6 +30,11 @@ class Admin::OffersController < AdminController
 
   def destroy
     @offer.destroy
+    redirect_to admin_offers_path
+  end
+
+  def toggle_status
+    @offer.update(force_disabled: !@offer.force_disabled)
     redirect_to admin_offers_path
   end
 
