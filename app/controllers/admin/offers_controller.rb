@@ -14,6 +14,16 @@ class Admin::OffersController < AdminController
     redirect_to admin_offers_path
   end
 
+  def edit
+    @offer = Offer.find(params[:id])
+  end
+
+  def update
+    @offer = Offer.find(params[:id])
+    @offer.update(offer_params)
+    redirect_to admin_offers_path
+  end
+
   private 
 
   def offer_params
