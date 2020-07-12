@@ -11,15 +11,21 @@ class Admin::OffersController < AdminController
 
   def create
     @offer = Offer.new(offer_params)
-    @offer.save
-    redirect_to admin_offers_path
+    if @offer.save
+      redirect_to admin_offers_path
+    else 
+      render :new
+    end
   end
 
   def edit; end
 
   def update
-    @offer.update(offer_params)
-    redirect_to admin_offers_path
+    if @offer.update(offer_params)
+      redirect_to admin_offers_path
+    else 
+      render :edit
+    end
   end
 
   def destroy
